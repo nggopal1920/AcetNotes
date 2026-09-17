@@ -1,0 +1,249 @@
+/* Footer Container Base */
+.footer-section {
+  background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  color: #94a3b8;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Footer Responsive Grid System (Desktop) */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* Brand Column */
+.brand-col {
+  padding-right: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.footer-logo .logo-icon {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.footer-logo .logo-text {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.footer-logo .logo-accent {
+  color: #3b82f6;
+}
+
+.footer-logo .logo-main {
+  color: #ffffff;
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin-bottom: 1.2rem;
+}
+
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  border: 1px solid #334155;
+}
+
+.social-links a:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Footer Titles & Links */
+.footer-title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.3px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.footer-links a i {
+  font-size: 0.6rem;
+  color: #3b82f6;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Contact Info Items */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.contact-item i {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  width: 16px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-links a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bottom-links a:hover {
+  color: #94a3b8;
+}
+
+.bottom-links .dot {
+  color: #334155;
+}
+
+/* Tablet Responsive View */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .brand-col {
+    grid-column: span 2;
+    padding-right: 0;
+  }
+}
+
+/* Mobile Compact Responsive View */
+@media (max-width: 600px) {
+  .footer-section {
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .brand-col {
+    grid-column: span 2;
+    margin-bottom: 0.5rem;
+  }
+
+  .brand-desc {
+    font-size: 0.82rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-title {
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-links a, 
+  .contact-item {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    padding-bottom: 1rem;
+  }
+}

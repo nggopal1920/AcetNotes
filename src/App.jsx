@@ -1,0 +1,62 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import BtechPage from './components/BtechPage';
+
+// B.techYearPages
+import FirstYearBTech from './B.techYearPages/FirstYearB.tech';
+import SecondYearBTech from './B.techYearPages/SecondYearB.tech';
+import ThirdYearBTech from './B.techYearPages/ThirdYearB.tech';
+import FourthYearBTech from './B.techYearPages/FourthYearB.tech';
+import NotesViewPage from './B.techYearPages/NotesViewPage';
+
+// Legal Pages (from legal folder)
+import PrivacyPolicy from './legal/PrivacyPolicy';
+import TermsAndConditions from './legal/TermsAndConditions';
+import AboutUs from './legal/AboutUs';
+import ContactUs from './legal/ContactUs';
+
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="app-container">
+        {/* Navbar हर पेज पर स्क्रीन के सबसे ऊपर परमानेंट रहेगा */}
+        <Navbar />
+
+        {/* Dynamic Pages Routing */}
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/btech" element={<BtechPage />} />
+
+            {/* B.Tech Year Routes */}
+            <Route path="/btech/1st-year" element={<FirstYearBTech />} />
+            <Route path="/btech/2nd-year" element={<SecondYearBTech />} />
+            <Route path="/btech/3rd-year" element={<ThirdYearBTech />} />
+            <Route path="/btech/4th-year" element={<FourthYearBTech />} />
+
+            {/* Dynamic Units & PDF Notes View Route */}
+            <Route path="/btech/notes-view" element={<NotesViewPage />} />
+
+            {/* Legal Pages Routes */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsAndConditions />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+          </Routes>
+        </main>
+
+        {/* Footer हर पेज के नीचे दिखेगा */}
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;

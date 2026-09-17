@@ -1,0 +1,239 @@
+/* Year Page Wrapper */
+.year-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* Header Section */
+.year-header {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 18px -4px rgba(0, 0, 0, 0.04);
+}
+
+.year-tag {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid #bfdbfe;
+  margin-bottom: 0.6rem;
+}
+
+.year-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.year-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Branch Selector Section */
+.branch-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+}
+
+.branch-chips-wrapper {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.branch-chip {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.branch-chip:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.branch-chip.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* Subjects Section */
+.subjects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.subjects-header h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.highlight-text {
+  color: #2563eb;
+}
+
+.count-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.subjects-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Subject Row Card */
+.subject-row-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.subject-row-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sub-code {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.sub-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.sub-units {
+  font-size: 0.78rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.btn-open-subject {
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-open-subject:hover {
+  background: #2563eb;
+}
+
+.btn-open-subject i {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-open-subject:hover i {
+  transform: translateX(3px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .year-page-container {
+    padding: 1rem;
+  }
+
+  .year-header {
+    padding: 1.2rem;
+  }
+
+  .year-title {
+    font-size: 1.3rem;
+  }
+
+  .year-desc {
+    font-size: 0.85rem;
+  }
+
+  .branch-section {
+    padding: 1rem;
+  }
+
+  .branch-chip {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .subject-row-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .btn-open-subject {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+}
