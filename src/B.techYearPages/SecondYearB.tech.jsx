@@ -8,14 +8,19 @@ const SecondYearBTech = () => {
 
   const branches = ['CSE', 'IT', 'ECE', 'ME', 'CE'];
 
-  // 2nd Year Branch-wise Subjects
+  // 2nd Year Branch-wise Subjects (CSE updated with 10 core subjects)
   const subjectsData = {
     CSE: [
-      { id: 'dsa', title: 'Data Structures', code: 'BCS301', unitsCount: 5 },
-      { id: 'coa', title: 'Computer Organization & Architecture', code: 'BCS302', unitsCount: 5 },
-      { id: 'discrete-maths', title: 'Discrete Mathematics', code: 'BCS303', unitsCount: 5 },
-      { id: 'oops-java', title: 'Object Oriented Programming with Java', code: 'BCS401', unitsCount: 5 },
-      { id: 'tafl', title: 'Theory of Automata & Formal Languages', code: 'BCS402', unitsCount: 5 },
+      { id: 'dsa', title: 'Data Structures & Algorithms', code: 'BCS301', unitsCount: 5 },
+      { id: 'co', title: 'Computer Organization & Architecture', code: 'BCS302', unitsCount: 5 },
+      { id: 'dstl', title: 'Discrete Structures & Theory of Logic', code: 'BCS303', unitsCount: 5 },
+      { id: 'web-tech', title: 'Web Technology', code: 'BCS304', unitsCount: 5 },
+      { id: 'maths-4', title: 'Engineering Mathematics-IV', code: 'BAS301', unitsCount: 5 },
+      { id: 'dbms', title: 'Database Management Systems', code: 'BCS401', unitsCount: 5 },
+      { id: 'ost', title: 'Operating Systems', code: 'BCS402', unitsCount: 5 },
+      { id: 'tafl', title: 'Theory of Automata & Formal Languages', code: 'BCS403', unitsCount: 5 },
+      { id: 'oop', title: 'Object Oriented Programming using Java', code: 'BCS404', unitsCount: 5 },
+      { id: 'python-prog', title: 'Python Programming', code: 'BCS405', unitsCount: 5 },
     ],
     IT: [
       { id: 'dsa', title: 'Data Structures', code: 'BIT301', unitsCount: 5 },
