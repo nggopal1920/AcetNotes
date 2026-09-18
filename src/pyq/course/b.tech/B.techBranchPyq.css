@@ -1,0 +1,186 @@
+/* B.techBranchPyq Unique CSS */
+.btech-branch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+}
+
+.branch-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.branch-back-btn {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4f46e5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.branch-back-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.branch-badge-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.badge-item {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.branch-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.branch-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Branch Cards Grid */
+.branch-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.branch-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  border-color: #4f46e5;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1);
+}
+
+.branch-top-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.branch-icon-wrap {
+  width: 48px;
+  height: 48px;
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.branch-text-wrap h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.branch-code-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Action Buttons */
+.branch-action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.branch-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.branch-btn-view {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.branch-btn-view:hover {
+  background-color: #e2e8f0;
+}
+
+.branch-btn-download {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.branch-btn-download:hover {
+  background-color: #4338ca;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 640px) {
+  .btech-branch-container {
+    padding: 15px 10px;
+  }
+
+  .branch-main-title {
+    font-size: 1.6rem;
+  }
+
+  .branch-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-card {
+    padding: 18px;
+  }
+}

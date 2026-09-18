@@ -1,0 +1,187 @@
+/* Container styling */
+.third-notes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.third-notes-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.third-back-btn {
+  background-color: #f0f2f5;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4f46e5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+  margin-bottom: 15px;
+}
+
+.third-back-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.third-subject-badge-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.third-branch-tag, .third-code-tag {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.third-branch-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.third-code-tag {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.third-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.third-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* Units Section Grid */
+.third-units-wrapper {
+  margin-top: 20px;
+}
+
+.third-section-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #334155;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* Responsive Grid: Desktop par multiple columns, mobile par ek single column */
+.third-units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Unit Card Styling */
+.third-unit-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.third-unit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.third-unit-number {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.third-unit-title {
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-top: 6px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Action Buttons Row */
+.third-actions-row {
+  display: flex;
+  gap: 12px;
+}
+
+.third-btn-action {
+  flex: 1;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.third-btn-view {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.third-btn-view:hover {
+  background-color: #e2e8f0;
+}
+
+.third-btn-download {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.third-btn-download:hover {
+  background-color: #4338ca;
+}
+
+/* Mobile Media Queries for Extra Fine-Tuning */
+@media screen and (max-width: 640px) {
+  .third-notes-container {
+    padding: 10px;
+  }
+
+  .third-main-title {
+    font-size: 1.5rem;
+  }
+
+  .third-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .third-units-grid {
+    grid-template-columns: 1fr; /* Mobile par cards poori width lenge */
+  }
+
+  .third-unit-card {
+    padding: 15px;
+  }
+}

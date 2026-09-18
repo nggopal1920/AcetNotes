@@ -51,8 +51,8 @@ const SecondYearBTech = () => {
   const currentSubjects = subjectsData[selectedBranch] || [];
 
   const handleSubjectClick = (subjectId) => {
-    // Navigates to subject unit-view page with URL parameters
-    navigate(`/btech/notes-view?year=2nd-year&branch=${selectedBranch}&subject=${subjectId}`);
+    // Updated route to match the new notes folder structure
+    navigate(`/notes/second-year?branch=${selectedBranch}&subject=${subjectId}`);
   };
 
   return (

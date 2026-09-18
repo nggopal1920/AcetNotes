@@ -1,0 +1,182 @@
+/* B.techCourse Unique CSS */
+.btech-course-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+}
+
+.course-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.course-back-btn {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4f46e5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.course-back-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.course-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #e0e7ff;
+  color: #3730a3;
+  margin-bottom: 12px;
+}
+
+.course-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.course-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Course Cards Grid Layout */
+.course-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.active-course:hover {
+  transform: translateY(-4px);
+  border-color: #4f46e5;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1);
+}
+
+.disabled-course {
+  opacity: 0.75;
+  background-color: #f8fafc;
+}
+
+.disabled-course:hover {
+  border-color: #94a3b8;
+}
+
+.course-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.course-icon-wrap {
+  width: 48px;
+  height: 48px;
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.disabled-course .course-icon-wrap {
+  background-color: #e2e8f0;
+  color: #64748b;
+}
+
+.course-code-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.disabled-course .course-code-tag {
+  color: #64748b;
+  background-color: #e2e8f0;
+}
+
+.course-info h3 {
+  font-size: 1.15rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.course-info p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.course-footer-row {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.explore-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.disabled-course .explore-text {
+  color: #94a3b8;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 640px) {
+  .btech-course-container {
+    padding: 15px 10px;
+  }
+
+  .course-main-title {
+    font-size: 1.6rem;
+  }
+
+  .course-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    padding: 18px;
+  }
+}

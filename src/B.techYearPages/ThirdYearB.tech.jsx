@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ThirdYearB.tech.css';
+import './SecondYearB.tech.css'; // Aap chahein toh apna ThirdYearB.tech.css bhi use kar sakte hain
 
 const ThirdYearBTech = () => {
   const navigate = useNavigate();
@@ -8,45 +8,43 @@ const ThirdYearBTech = () => {
 
   const branches = ['CSE', 'IT', 'ECE', 'ME', 'CE'];
 
-  // 3rd Year Branch-wise Subjects
+  // 3rd Year Branch-wise Subjects Data (AKTU Syllabus)
   const subjectsData = {
     CSE: [
-      { id: 'dbms', title: 'Database Management Systems', code: 'BCS501', unitsCount: 5 },
+      { id: 'dbms', title: 'Database Management System', code: 'BCS501', unitsCount: 5 },
       { id: 'web-tech', title: 'Web Technology', code: 'BCS502', unitsCount: 5 },
-      { id: 'compiler-design', title: 'Compiler Design', code: 'BCS503', unitsCount: 5 },
-      { id: 'cn', title: 'Computer Networks', code: 'BCS601', unitsCount: 5 },
-      { id: 'se', title: 'Software Engineering', code: 'BCS602', unitsCount: 5 },
+      { id: 'daa', title: 'Design and Analysis of Algorithm', code: 'BCS503', unitsCount: 5 },
+      { id: 'ood-cpp', title: 'Object Oriented System Design with C++', code: 'BCS054', unitsCount: 5 },
+      { id: 'dwm', title: 'Data Warehousing & Data Mining', code: 'BCS058', unitsCount: 5 },
+      { id: 'se', title: 'Software Engineering', code: 'BCS601', unitsCount: 5 },
+      { id: 'compiler-design', title: 'Compiler Design', code: 'BCS602', unitsCount: 5 },
+      { id: 'cn', title: 'Computer Networks', code: 'BCS603', unitsCount: 5 },
+      { id: 'data-compression', title: 'Data Compression', code: 'BCS064', unitsCount: 5 },
+      { id: 'spm', title: 'Software Project Management', code: 'DBOE068', unitsCount: 5 },
     ],
     IT: [
-      { id: 'dbms', title: 'Database Management Systems', code: 'BIT501', unitsCount: 5 },
-      { id: 'web-tech', title: 'Web Technology', code: 'BIT502', unitsCount: 5 },
-      { id: 'cn', title: 'Computer Networks', code: 'BIT601', unitsCount: 5 },
-      { id: 'daa', title: 'Design & Analysis of Algorithms', code: 'BIT602', unitsCount: 5 },
+      { id: 'it-sub-1', title: 'Information Security & Cyber Laws', code: 'BIT501', unitsCount: 5 },
+      { id: 'it-sub-2', title: 'Web & Internet Technology', code: 'BIT502', unitsCount: 5 },
     ],
     ECE: [
-      { id: 'dsp', title: 'Digital Signal Processing', code: 'BEC501', unitsCount: 5 },
-      { id: 'vlsi-design', title: 'VLSI Design', code: 'BEC502', unitsCount: 5 },
-      { id: 'antenna-propagation', title: 'Antenna & Wave Propagation', code: 'BEC503', unitsCount: 5 },
-      { id: 'control-systems', title: 'Control Systems', code: 'BEC601', unitsCount: 5 },
+      { id: 'ece-sub-1', title: 'Microprocessors & Microcontrollers', code: 'BEC501', unitsCount: 5 },
+      { id: 'ece-sub-2', title: 'Digital Communication', code: 'BEC502', unitsCount: 5 },
     ],
     ME: [
-      { id: 'heat-transfer', title: 'Heat & Mass Transfer', code: 'BME501', unitsCount: 5 },
-      { id: 'machine-design', title: 'Design of Machine Elements', code: 'BME502', unitsCount: 5 },
-      { id: 'ic-engines', title: 'Internal Combustion Engines', code: 'BME601', unitsCount: 5 },
-      { id: 'manufacturing-tech', title: 'Advanced Manufacturing Tech', code: 'BME602', unitsCount: 5 },
+      { id: 'me-sub-1', title: 'Machine Design-I', code: 'BME501', unitsCount: 5 },
+      { id: 'me-sub-2', title: 'Heat and Mass Transfer', code: 'BME502', unitsCount: 5 },
     ],
     CE: [
-      { id: 'geotechnical-eng', title: 'Geotechnical Engineering', code: 'BCE501', unitsCount: 5 },
-      { id: 'design-concrete', title: 'Design of Concrete Structures', code: 'BCE502', unitsCount: 5 },
-      { id: 'environmental-eng', title: 'Environmental Engineering', code: 'BCE601', unitsCount: 5 },
-      { id: 'transportation-eng', title: 'Transportation Engineering', code: 'BCE602', unitsCount: 5 },
+      { id: 'ce-sub-1', title: 'Design of Concrete Structures-I', code: 'BCE501', unitsCount: 5 },
+      { id: 'ce-sub-2', title: 'Geotechnical Engineering', code: 'BCE502', unitsCount: 5 },
     ],
   };
 
   const currentSubjects = subjectsData[selectedBranch] || [];
 
   const handleSubjectClick = (subjectId) => {
-    navigate(`/btech/notes-view?year=3rd-year&branch=${selectedBranch}&subject=${subjectId}`);
+    // Ye route aapko unit-wise notes page par le jayega jo humne pehle banaya tha
+    navigate(`/notes/third-year?branch=${selectedBranch}&subject=${subjectId}`);
   };
 
   return (
@@ -56,7 +54,7 @@ const ThirdYearBTech = () => {
         <span className="year-tag">Third Year B.Tech</span>
         <h1 className="year-title">3rd Year Syllabus & Core Subjects</h1>
         <p className="year-desc">
-          Select your engineering branch to view core subjects and download unit-wise PDF notes.
+          Select your engineering branch to view core subjects and access unit-wise notes.
         </p>
       </div>
 
@@ -87,23 +85,29 @@ const ThirdYearBTech = () => {
         </div>
 
         <div className="subjects-list-grid">
-          {currentSubjects.map((subject) => (
-            <div key={subject.id} className="subject-row-card">
-              <div className="subject-info">
-                <span className="sub-code">{subject.code}</span>
-                <h4 className="sub-title">{subject.title}</h4>
-                <span className="sub-units">{subject.unitsCount} Units Available</span>
-              </div>
+          {currentSubjects.length > 0 ? (
+            currentSubjects.map((subject) => (
+              <div key={subject.id} className="subject-row-card">
+                <div className="subject-info">
+                  <span className="sub-code">{subject.code}</span>
+                  <h4 className="sub-title">{subject.title}</h4>
+                  <span className="sub-units">{subject.unitsCount} Units Available</span>
+                </div>
 
-              <button
-                className="btn-open-subject"
-                onClick={() => handleSubjectClick(subject.id)}
-              >
-                <span>View Notes</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-          ))}
+                <button
+                  className="btn-open-subject"
+                  onClick={() => handleSubjectClick(subject.id)}
+                >
+                  <span>View Notes</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            ))
+          ) : (
+            <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#888', padding: '20px' }}>
+              Subjects for this branch will be updated soon.
+            </p>
+          )}
         </div>
       </div>
     </div>

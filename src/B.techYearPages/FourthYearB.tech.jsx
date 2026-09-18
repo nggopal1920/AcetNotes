@@ -45,8 +45,8 @@ const FourthYearBTech = () => {
 
   const currentSubjects = subjectsData[selectedBranch] || [];
 
-  const handleSubjectClick = (subjectId) => {
-    navigate(`/btech/notes-view?year=4th-year&branch=${selectedBranch}&subject=${subjectId}`);
+ const handleSubjectClick = (subjectId) => {
+    navigate(`/notes/fourth-year?branch=${selectedBranch}&subject=${subjectId}`);
   };
 
   return (

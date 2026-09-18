@@ -39,8 +39,7 @@ const FirstYearBTech = () => {
   const currentSubjects = subjectsData[selectedBranch] || [];
 
   const handleSubjectClick = (subjectId) => {
-    // Navigates to subject details page with branch and subject query parameters
-    navigate(`/btech/notes-view?year=1st-year&branch=${selectedBranch}&subject=${subjectId}`);
+    navigate(`/notes/first-year?branch=${selectedBranch}&subject=${subjectId}`);
   };
 
   return (
