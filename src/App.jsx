@@ -19,10 +19,11 @@ import NotesBtechSecond from './notes/NotesBtechSecond';
 import NotesBtechThird from './notes/NotesBtechThird';
 import NotesBtechFourth from './notes/NotesBtechFourth';
 
-// PYQ Pages (from pyq/course/b.tech folder) - New Routes Added
+// PYQ Pages (from pyq/course/b.tech folder)
 import BtechCourse from './pyq/course/b.tech/B.techCourse';
 import BtechYearPyq from './pyq/course/b.tech/B.techYearPyq';
 import BtechBranchPyq from './pyq/course/b.tech/B.techBranchPyq';
+import BtechSubjectPyq from './pyq/course/b.tech/BtechSubjectPyq'; // <--- Yeh raha correct spelling (BtechSubjectPyq)
 
 // Legal Pages (from legal folder)
 import PrivacyPolicy from './legal/PrivacyPolicy';
@@ -61,6 +62,7 @@ function App() {
             <Route path="/pyq" element={<BtechCourse />} />
             <Route path="/pyq/course/b.tech/year" element={<BtechYearPyq />} />
             <Route path="/pyq/course/b.tech/branch" element={<BtechBranchPyq />} />
+            <Route path="/pyq/course/b.tech/pyq-years" element={<BtechSubjectPyq />} />
 
             {/* Legal Pages Routes */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
