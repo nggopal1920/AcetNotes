@@ -12,7 +12,17 @@ import FirstYearBTech from './B.techYearPages/FirstYearB.tech';
 import SecondYearBTech from './B.techYearPages/SecondYearB.tech';
 import ThirdYearBTech from './B.techYearPages/ThirdYearB.tech';
 import FourthYearBTech from './B.techYearPages/FourthYearB.tech';
-import NotesViewPage from './B.techYearPages/NotesViewPage';
+
+// Notes Pages (from notes folder)
+import NotesBtechFirst from './notes/NotesBtechFirst';
+import NotesBtechSecond from './notes/NotesBtechSecond';
+import NotesBtechThird from './notes/NotesBtechThird';
+import NotesBtechFourth from './notes/NotesBtechFourth';
+
+// PYQ Pages (from pyq/course/b.tech folder) - New Routes Added
+import BtechCourse from './pyq/course/b.tech/B.techCourse';
+import BtechYearPyq from './pyq/course/b.tech/B.techYearPyq';
+import BtechBranchPyq from './pyq/course/b.tech/B.techBranchPyq';
 
 // Legal Pages (from legal folder)
 import PrivacyPolicy from './legal/PrivacyPolicy';
@@ -26,7 +36,7 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Navbar हर पेज पर स्क्रीन के सबसे ऊपर परमानेंट रहेगा */}
+        {/* Navbar har page par screen ke sabse upar permanent rahega */}
         <Navbar />
 
         {/* Dynamic Pages Routing */}
@@ -41,8 +51,16 @@ function App() {
             <Route path="/btech/3rd-year" element={<ThirdYearBTech />} />
             <Route path="/btech/4th-year" element={<FourthYearBTech />} />
 
-            {/* Dynamic Units & PDF Notes View Route */}
-            <Route path="/btech/notes-view" element={<NotesViewPage />} />
+            {/* Subject wise Notes Routes */}
+            <Route path="/notes/first-year" element={<NotesBtechFirst />} />
+            <Route path="/notes/second-year" element={<NotesBtechSecond />} />
+            <Route path="/notes/third-year" element={<NotesBtechThird />} />
+            <Route path="/notes/fourth-year" element={<NotesBtechFourth />} />
+
+            {/* PYQ Flow Routes */}
+            <Route path="/pyq" element={<BtechCourse />} />
+            <Route path="/pyq/course/b.tech/year" element={<BtechYearPyq />} />
+            <Route path="/pyq/course/b.tech/branch" element={<BtechBranchPyq />} />
 
             {/* Legal Pages Routes */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -52,7 +70,7 @@ function App() {
           </Routes>
         </main>
 
-        {/* Footer हर पेज के नीचे दिखेगा */}
+        {/* Footer har page ke niche dikhega */}
         <Footer />
       </div>
     </Router>
