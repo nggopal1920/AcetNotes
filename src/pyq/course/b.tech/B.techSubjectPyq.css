@@ -1,0 +1,128 @@
+/* Main Container */
+.subject-pyq-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Area */
+.subject-pyq-header {
+  margin-bottom: 30px;
+}
+
+.subject-pyq-header button {
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #334155;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.subject-pyq-header button:hover {
+  background: #e2e8f0;
+}
+
+.subject-pyq-header h1 {
+  font-size: 26px;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.subject-pyq-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* PYQ Years List Card Layout */
+.pyq-years-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pyq-years-list > div {
+  background: #ffffff;
+  padding: 22px 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pyq-years-list > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Card Title & Year Tag */
+.pyq-years-list h3 {
+  font-size: 17px;
+  color: #1e293b;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Action Buttons Inside PYQ Card */
+.pyq-years-list a {
+  padding: 9px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.pyq-years-list a:first-of-type {
+  background: #10b981; /* View Button Color (Green) */
+  color: #ffffff;
+}
+
+.pyq-years-list a:first-of-type:hover {
+  background: #059669;
+}
+
+.pyq-years-list a:last-of-type {
+  background: #2563eb; /* Download Button Color (Blue) */
+  color: #ffffff;
+}
+
+.pyq-years-list a:last-of-type:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 600px) {
+  .pyq-years-list > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pyq-years-list div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pyq-years-list a {
+    flex: 1;
+    justify-content: center;
+  }
+}
