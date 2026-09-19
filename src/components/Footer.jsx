@@ -15,8 +15,8 @@ const Footer = () => {
                 <i className="fa-solid fa-graduation-cap"></i>
               </div>
               <div className="logo-text">
-                <span className="logo-accent">Acet</span>
-                <span className="logo-main">Study</span>
+                <span className="logo-accent">Aktu</span>
+                <span className="logo-main">Notes</span>
               </div>
             </Link>
             <p className="brand-desc">
@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <i className="fa-solid fa-envelope"></i>
-                <span>support@acetstudy.com</span>
+                <span>support@aktunotes.com</span>
               </div>
               <div className="contact-item">
                 <i className="fa-solid fa-phone"></i>
@@ -80,7 +80,7 @@ const Footer = () => {
 
         {/* Footer Bottom Strip */}
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} acetStudy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Aktu Notes. All rights reserved.</p>
           <div className="bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <span className="dot">•</span>

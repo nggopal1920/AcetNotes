@@ -38,27 +38,27 @@ const BtechPage = () => {
 
   return (
     <div className="btech-container">
-      {/* Article / Header Section */}
+      {/* Article / Header Section - Customized for 3rd Year Focus */}
       <section className="btech-article-card">
         <span className="article-badge">
-          <i className="fa-solid fa-graduation-cap"></i> B.Tech Resource Hub
+          <i className="fa-solid fa-network-wired"></i> B.Tech 3rd Year Special Hub
         </span>
-        <h1 className="article-title">Select Academic Year</h1>
+        <h1 className="article-title">B.Tech 3rd Year Advanced Engineering Resources</h1>
         <p className="article-p">
-          Welcome to the <span className="brand-highlight">acetStudy</span> engineering repository. Select your academic year to view branch-wise syllabus, handwritten notes, and semester exam resources.
+          Welcome to the <span className="brand-highlight">"AktuNotes</span> 3rd Year repository. This section is specially dedicated to core technical semesters featuring advanced algorithms, system design, operating systems, database management, and semester exam preparation notes.
         </p>
         <div className="article-tips">
           <div className="tip-item">
             <i className="fa-solid fa-circle-check"></i>
-            <span>Unit-wise Handwritten Notes</span>
+            <span>Core Subject Handwritten Notes</span>
           </div>
           <div className="tip-item">
             <i className="fa-solid fa-circle-check"></i>
-            <span>Updated Syllabus</span>
+            <span>AKTU PYQs & Previous Year Solutions</span>
           </div>
           <div className="tip-item">
             <i className="fa-solid fa-circle-check"></i>
-            <span>Free High-Speed PDF Access</span>
+            <span>Gate & Placement Oriented Material</span>
           </div>
         </div>
       </section>
@@ -92,6 +92,37 @@ const BtechPage = () => {
               </button>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Extra SEO & AdSense Content Section */}
+      <section className="btech-article-card" style={{ marginTop: '2.5rem' }}>
+        <span className="article-badge">
+          <i className="fa-solid fa-book-open"></i> Complete Study Guide & Overview
+        </span>
+        <h2 className="article-title" style={{ fontSize: '1.5rem', marginTop: '0.5rem' }}>
+          Why B.Tech 3rd Year is Crucial for Your Engineering Career
+        </h2>
+        <p className="article-p">
+          The third year of engineering is widely considered the backbone of a technical degree. During this phase, students transition from foundational concepts to core engineering domains such as Computer Science, Information Technology, Electronics, and Mechanical branches. Scoring well in these semesters requires precise understanding, structured notes, and regular practice of previous years' question papers (PYQs).
+        </p>
+        
+        <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.6rem' }}>
+          What Resources Do We Provide for Engineering Students?
+        </h3>
+        <p className="article-p" style={{ marginBottom: '1rem' }}>
+          At <strong>AktuNotes</strong>, our mission is to bridge the gap between quality education and accessibility. We curate unit-wise handwritten notes prepared by university toppers and experienced faculty members. Whether you are preparing for AKTU semester examinations, campus placements, or competitive exams like GATE, our repository offers structured guidance to ensure conceptual clarity.
+        </p>
+
+        <div className="article-tips" style={{ marginTop: '1rem' }}>
+          <div className="tip-item">
+            <i className="fa-solid fa-shield-halved"></i>
+            <span>100% Verified Syllabus Content</span>
+          </div>
+          <div className="tip-item">
+            <i className="fa-solid fa-bolt"></i>
+            <span>Fast PDF Loading & Free Access</span>
+          </div>
         </div>
       </section>
     </div>

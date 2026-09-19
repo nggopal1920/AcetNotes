@@ -8,6 +8,7 @@
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .navbar-container {
@@ -39,12 +40,15 @@
   justify-content: center;
   font-size: 1.1rem;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
 }
 
 .logo-text {
   font-size: 1.45rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-accent {
@@ -93,7 +97,13 @@
   color: #2563eb;
 }
 
-/* Gradient Login Button */
+/* Desktop Action Button */
+.desktop-action {
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient Login/Explore Button */
 .login-btn {
   text-decoration: none;
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
@@ -107,6 +117,7 @@
   gap: 8px;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .login-btn:hover {
@@ -128,20 +139,36 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease;
 }
 
-/* Mobile Drawer (Absolute Overlay Fix) */
+.mobile-toggle-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Mobile Drawer (Slide-in Animation & Overlay) */
 .mobile-drawer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 270px;
+  width: 280px;
+  max-width: 85vw;
   height: 100vh;
   background: #ffffff;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
   z-index: 99999;
   display: flex;
   flex-direction: column;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .drawer-header {
@@ -153,7 +180,7 @@
 }
 
 .drawer-logo {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0f172a;
 }
@@ -161,12 +188,21 @@
 .drawer-close-btn {
   background: #f8fafc;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
   font-size: 1.1rem;
   color: #64748b;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.drawer-close-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .drawer-body {
@@ -188,22 +224,30 @@
   text-decoration: none;
   color: #334155;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav-links a:hover {
+  background: #eff6ff;
+  color: #2563eb;
 }
 
 .mobile-nav-links a i {
   color: #2563eb;
   width: 20px;
+  text-align: center;
 }
 
 .drawer-footer {
   padding: 1.2rem;
   border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
 }
 
 .mobile-login-btn {
@@ -218,12 +262,23 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(15, 23, 42, 0.45);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   z-index: 99998;
+  animation: fadeIn 0.25s ease forwards;
 }
 
-/* Responsive Rules */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Rules for Phone & Desktop */
 @media (max-width: 868px) {
   .desktop-nav-links,
   .desktop-action {
@@ -232,6 +287,10 @@
 
   .mobile-toggle-btn {
     display: flex !important;
+  }
+  
+  .navbar-container {
+    padding: 0.75rem 1rem;
   }
 }
 

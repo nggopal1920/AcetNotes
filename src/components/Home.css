@@ -1,7 +1,13 @@
+/* Home Container */
 .home-container {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  overflow-x: hidden;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hero Section */
@@ -10,6 +16,7 @@
   padding: 4rem 1rem 3rem;
   background: radial-gradient(circle at top, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 20px;
+  border-bottom: 1px solid #e2e8f0;
   margin-bottom: 3rem;
 }
 
@@ -103,7 +110,7 @@
   border-color: #93c5fd;
 }
 
-/* Features Section */
+/* Features Section & General Titles */
 .features-section {
   padding: 2rem 0;
 }
@@ -176,10 +183,399 @@
   font-size: 0.95rem;
 }
 
-/* CTA Section */
+/* Explore Courses Grid Section */
+.courses-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+.course-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.course-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.course-count {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* CGPA Section */
+.cgpa-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  margin: 40px 0;
+}
+
+.cgpa-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.cgpa-badge {
+  display: inline-block;
+  background-color: #f0fdf4;
+  color: #16a34a;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+}
+
+.cgpa-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.cgpa-header p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.cgpa-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.cgpa-card {
+  background: #f8fafc;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.cgpa-card:hover {
+  transform: translateY(-3px);
+}
+
+.cgpa-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.cgpa-card h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.cgpa-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* About Builders Section */
+.about-builders-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.builders-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.builders-badge {
+  display: inline-block;
+  background-color: #faf5ff;
+  color: #9333ea;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.builders-text h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.builders-text p {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.btn-community {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-community:hover {
+  background-color: #1e293b;
+}
+
+.builders-stats-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.builder-stat-card {
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.builder-stat-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.builder-stat-card p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* Semester Banner Section */
+.semester-banner-section {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0;
+}
+
+.semester-banner-content {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border-radius: 16px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.semester-text h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.semester-text p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.btn-semester {
+  background-color: #ffffff;
+  color: #2563eb;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-semester:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.semester-badge-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 30px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 220px;
+}
+
+.semester-badge-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.semester-badge-card p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.faq-top-label {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.faq-main-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+}
+
+.faq-item.active {
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.faq-question i {
+  color: #64748b;
+  transition: transform 0.3s ease;
+}
+
+.faq-question i.rotate {
+  transform: rotate(180deg);
+  color: #2563eb;
+}
+
+.faq-answer {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Call To Action Section */
 .cta-section {
   margin-top: 4rem;
-  padding: 1rem 0;
+  padding: 0 0 2rem;
 }
 
 .cta-box {
@@ -217,10 +613,19 @@
   background-color: #1d4ed8;
 }
 
-/* Responsive Styles */
+/* ==========================================
+   RESPONSIVE STYLES (MOBILE 2-COLUMN GRID FIX)
+   ========================================== */
+/* ==========================================
+   RESPONSIVE STYLES (UPDATED)
+   ========================================== */
 @media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .hero-subtitle {
@@ -234,5 +639,70 @@
   .btn-primary, .btn-secondary {
     width: 100%;
     justify-content: center;
+  }
+
+  /* 1. Upar wale "What We Offer" ke 3 cards mobile par ek row me 1 hi aayenge */
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  /* 2. Baaki sabhi grids (Courses aur CGPA suite) mobile par 2-2 boxes hi rahenge ek row me */
+  .courses-grid,
+  .cgpa-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+
+  .course-card,
+  .cgpa-card {
+    padding: 14px;
+  }
+
+  .course-card h3, 
+  .cgpa-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .cgpa-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .course-icon, 
+  .cgpa-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .course-count {
+    font-size: 0.8rem;
+  }
+
+  .section-title, .faq-main-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .builders-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .semester-banner-content {
+    padding: 30px 20px;
+  }
+
+  .semester-text h2 {
+    font-size: 1.75rem;
   }
 }
