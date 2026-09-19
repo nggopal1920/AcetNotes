@@ -81,7 +81,7 @@ const ContactUs = () => {
 
         {/* यहाँ है डायरेक्ट ईमेल सपोर्ट जो स्क्रीन पर दिखेगा */}
         <div className="direct-support">
-          <p>Prefer direct emailing? Reach us at: <a href="mailto:support@acetstudy.com"><strong>support@acetstudy.com</strong></a></p>
+          <p>Prefer direct emailing? Reach us at: <a href="mailto:support@aktunotes.com"><strong>aktunotes.official@gmail.com</strong></a></p>
         </div>
       </div>
     </div>

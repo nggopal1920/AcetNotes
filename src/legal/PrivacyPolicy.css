@@ -1,38 +1,101 @@
-.legal-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  color: #1e293b;
-  line-height: 1.6;
+/* Privacy Policy Page Wrapper */
+.privacy-page-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.legal-container h1 {
+/* Main Container Box */
+.privacy-container {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.03);
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+/* Badge / Top Disclaimer Tag */
+.privacy-badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid #bfdbfe;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Titles & Headings */
+.privacy-title {
   font-size: 1.8rem;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 0.5rem;
 }
 
-.legal-container p {
-  color: #475569;
-  margin-bottom: 1rem;
+.privacy-subtitle {
+  color: #64748b;
   font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.legal-container h2 {
-  font-size: 1.2rem;
+.privacy-section {
+  margin-top: 2rem;
+}
+
+.privacy-section h2 {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #1e293b;
-  margin-top: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-section p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-section ul {
+  padding-left: 1.2rem;
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-section li {
   margin-bottom: 0.5rem;
 }
 
+.privacy-section a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.privacy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .legal-container {
-    margin: 1rem;
+  .privacy-page-wrapper {
+    padding: 1rem 0.5rem;
+  }
+
+  .privacy-container {
     padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .privacy-title {
+    font-size: 1.4rem;
   }
 }
