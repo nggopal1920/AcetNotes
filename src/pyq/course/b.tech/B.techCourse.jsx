@@ -5,7 +5,6 @@ import './B.techCourse.css';
 const BtechCourse = () => {
   const navigate = useNavigate();
 
-  // Courses list jisme B.Tech sabse upar aur BCA second number par hai
   const coursesList = [
     {
       id: 'btech',
@@ -14,7 +13,7 @@ const BtechCourse = () => {
       description: 'Engineering courses across all branches (CSE, IT, ECE, ME, Civil, etc.)',
       icon: 'fa-solid fa-graduation-cap',
       isAvailable: true,
-      path: '/pyq/course/b.tech/year' // B.Tech click hone par year page par jayega
+      path: '/pyq/course/b.tech/year'
     },
     {
       id: 'bca',
@@ -22,7 +21,7 @@ const BtechCourse = () => {
       code: 'BCA',
       description: 'Computer applications, software development, and programming fundamentals.',
       icon: 'fa-solid fa-code',
-      isAvailable: false, // Abhi ke liye coming soon ya baad ke liye
+      isAvailable: false,
       path: '#'
     },
     {
@@ -64,7 +63,7 @@ const BtechCourse = () => {
   ];
 
   const handleCourseClick = (course) => {
-    if (course.id === 'btech') {
+    if (course.isAvailable) {
       navigate(course.path);
     } else {
       alert('Coming soon! Currently only B.Tech PYQs are available.');
@@ -73,22 +72,22 @@ const BtechCourse = () => {
 
   return (
     <div className="btech-course-container">
-      {/* Header Section */}
       <div className="course-header">
         <button className="course-back-btn" onClick={() => navigate('/')}>
           <i className="fa-solid fa-arrow-left"></i> Back to Home
         </button>
-        <span className="course-badge">PYQ Portal</span>
-        <h1 className="course-main-title">Select Your Course</h1>
-        <p className="course-subtitle">Choose your academic degree to explore previous year question papers and syllabus.</p>
+        <span className="course-badge">AKTU PYQ Portal & Resource Hub</span>
+        <h1 className="course-main-title">Select Your Academic Course</h1>
+        <p className="course-subtitle">
+          Access comprehensive previous year question papers (PYQs), semester syllabus, and structured exam preparation modules tailored for Dr. A.P.J. Abdul Kalam Technical University students.
+        </p>
       </div>
 
-      {/* Courses Grid */}
       <div className="course-cards-grid">
         {coursesList.map((course) => (
           <div 
             key={course.id} 
-            className={`course-card ${course.id === 'btech' ? 'active-course' : 'disabled-course'}`}
+            className={`course-card ${course.isAvailable ? 'active-course' : 'disabled-course'}`}
             onClick={() => handleCourseClick(course)}
           >
             <div className="course-top-row">
@@ -105,11 +104,33 @@ const BtechCourse = () => {
 
             <div className="course-footer-row">
               <span className="explore-text">
-                {course.id === 'btech' ? 'Explore PYQs →' : 'Coming Soon'}
+                {course.isAvailable ? 'Explore PYQs →' : 'Coming Soon'}
               </span>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="pyq-intro-banner">
+        <h2>Why Practice with Previous Year Question Papers?</h2>
+        <p>
+          Mastering university examinations requires a strategic approach. Analyzing past question papers helps engineering and professional students understand recurring exam patterns, crucial unit weightage, and the standard of questions asked in semester exams. AktuNotes provides verified, high-resolution PDF papers to streamline your last-minute preparation and boost your SGPA.
+        </p>
+      </div>
+
+      <div className="pyq-bottom-seo-section">
+        <div className="pyq-seo-box">
+          <h3><i className="fa-solid fa-circle-check"></i> Verified University Standards</h3>
+          <p>All question papers are curated following the latest official AKTU curriculum and guidelines to ensure absolute accuracy.</p>
+        </div>
+        <div className="pyq-seo-box">
+          <h3><i className="fa-solid fa-bolt"></i> Instant High-Speed Downloads</h3>
+          <p>Optimized PDF archives ensure lightning-fast access without annoying redirects or heavy data usage for students.</p>
+        </div>
+        <div className="pyq-seo-box">
+          <h3><i className="fa-solid fa-users-gear"></i> Built By Engineers & Alumni</h3>
+          <p>Created by senior technical graduates who understand the exact scoring methodologies required for university success.</p>
+        </div>
       </div>
     </div>
   );
