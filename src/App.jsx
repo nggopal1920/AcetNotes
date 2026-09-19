@@ -23,13 +23,16 @@ import NotesBtechFourth from './notes/NotesBtechFourth';
 import BtechCourse from './pyq/course/b.tech/B.techCourse';
 import BtechYearPyq from './pyq/course/b.tech/B.techYearPyq';
 import BtechBranchPyq from './pyq/course/b.tech/B.techBranchPyq';
-import BtechSubjectPyq from './pyq/course/b.tech/BtechSubjectPyq'; // <--- Yeh raha correct spelling (BtechSubjectPyq)
+import BtechSubjectPyq from './pyq/course/b.tech/BtechSubjectPyq'; 
 
 // Legal Pages (from legal folder)
 import PrivacyPolicy from './legal/PrivacyPolicy';
 import TermsAndConditions from './legal/TermsAndConditions';
 import AboutUs from './legal/AboutUs';
 import ContactUs from './legal/ContactUs';
+
+// Coaching / BtechMaterial Page
+import BtechMaterial from './materialcourse/BtechMaterial';
 
 import './App.css';
 
@@ -45,6 +48,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/btech" element={<BtechPage />} />
+
+            {/* Coaching / Material Course Route */}
+            <Route path="/materialcourse/BtechMaterial" element={<BtechMaterial />} />
 
             {/* B.Tech Year Routes */}
             <Route path="/btech/1st-year" element={<FirstYearBTech />} />
