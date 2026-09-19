@@ -22,16 +22,27 @@ import NotesBtechFourth from './notes/NotesBtechFourth';
 // PYQ Pages (from pyq/course/b.tech folder)
 import BtechCourse from './pyq/course/b.tech/B.techCourse';
 import BtechYearPyq from './pyq/course/b.tech/B.techYearPyq';
-import BtechBranchPyq from './pyq/course/b.tech/B.techBranchPyq';
-import BtechSubjectPyq from './pyq/course/b.tech/BtechSubjectPyq'; 
 
-// Legal Pages (from legal folder)
+// Year-wise PYQ Components import
+import FirstYearPyqBtech from './pyq/course/b.tech/BtechYearPyq/FirstYearPyqBtech';
+import SecondYearPyqBtech from './pyq/course/b.tech/BtechYearPyq/SecondYearPyqBtech';
+import ThirdYearPyqBtech from './pyq/course/b.tech/BtechYearPyq/ThirdYearPyqBtech';
+import FourthYearPyqBtech from './pyq/course/b.tech/BtechYearPyq/FourthYearPyqBtech';
+
+// BtechPyqDrive Components import
+import FirstBtechDrive from './pyq/course/b.tech/BtechPyqDrive/FirstBtechDrive';
+import SecondBtechDrive from './pyq/course/b.tech/BtechPyqDrive/SecondBtechDrive';
+import ThirdBtechDrive from './pyq/course/b.tech/BtechPyqDrive/ThirdBtechDrive';
+
+import BtechBranchPyq from './pyq/course/b.tech/B.techBranchPyq';
+
+// Legal Pages
 import PrivacyPolicy from './legal/PrivacyPolicy';
 import TermsAndConditions from './legal/TermsAndConditions';
 import AboutUs from './legal/AboutUs';
 import ContactUs from './legal/ContactUs';
 
-// Coaching / BtechMaterial Page
+// B.tech Material Page
 import BtechMaterial from './materialcourse/BtechMaterial';
 
 import './App.css';
@@ -40,37 +51,43 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Navbar har page par screen ke sabse upar permanent rahega */}
         <Navbar />
 
-        {/* Dynamic Pages Routing */}
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/btech" element={<BtechPage />} />
 
-            {/* Coaching / Material Course Route */}
             <Route path="/materialcourse/BtechMaterial" element={<BtechMaterial />} />
 
-            {/* B.Tech Year Routes */}
             <Route path="/btech/1st-year" element={<FirstYearBTech />} />
             <Route path="/btech/2nd-year" element={<SecondYearBTech />} />
             <Route path="/btech/3rd-year" element={<ThirdYearBTech />} />
             <Route path="/btech/4th-year" element={<FourthYearBTech />} />
 
-            {/* Subject wise Notes Routes */}
             <Route path="/notes/first-year" element={<NotesBtechFirst />} />
             <Route path="/notes/second-year" element={<NotesBtechSecond />} />
             <Route path="/notes/third-year" element={<NotesBtechThird />} />
             <Route path="/notes/fourth-year" element={<NotesBtechFourth />} />
 
-            {/* PYQ Flow Routes */}
             <Route path="/pyq" element={<BtechCourse />} />
             <Route path="/pyq/course/b.tech/year" element={<BtechYearPyq />} />
-            <Route path="/pyq/course/b.tech/branch" element={<BtechBranchPyq />} />
-            <Route path="/pyq/course/b.tech/pyq-years" element={<BtechSubjectPyq />} />
 
-            {/* Legal Pages Routes */}
+            {/* 1st Year Branch and Drive Routes */}
+            <Route path="/pyq/course/b.tech/first-year" element={<FirstYearPyqBtech />} />
+            <Route path="/pyq/course/b.tech/first-drive" element={<FirstBtechDrive />} />
+
+            <Route path="/pyq/course/b.tech/second-year" element={<SecondYearPyqBtech />} />
+            <Route path="/pyq/course/b.tech/third-year" element={<ThirdYearPyqBtech />} />
+            <Route path="/pyq/course/b.tech/fourth-year" element={<FourthYearPyqBtech />} />
+
+            {/* Btech Pyq Drive / Subject Routes */}
+            <Route path="/pyq/course/b.tech/second-drive" element={<SecondBtechDrive />} />
+            <Route path="/pyq/course/b.tech/third-drive" element={<ThirdBtechDrive />} />
+            <Route path="/pyq/course/b.tech/drive/4th-year" element={<FourthYearPyqBtech />} /> 
+
+            <Route path="/pyq/course/b.tech/branch" element={<BtechBranchPyq />} />
+
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsAndConditions />} />
             <Route path="/about-us" element={<AboutUs />} />
@@ -78,7 +95,6 @@ function App() {
           </Routes>
         </main>
 
-        {/* Footer har page ke niche dikhega */}
         <Footer />
       </div>
     </Router>
