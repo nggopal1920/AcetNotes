@@ -4,7 +4,7 @@ import './SecondYearPyqBtech.css';
 
 const SecondYearPyqBtech = () => {
   const navigate = useNavigate();
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [selectedBranch, setSelectedBranch] = useState('cse');
 
   // 2nd Year Branches list with their respective subjects (3rd & 4th Semesters)
   const branchData = {

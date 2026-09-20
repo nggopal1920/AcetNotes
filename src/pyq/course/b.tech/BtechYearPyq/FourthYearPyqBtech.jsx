@@ -4,7 +4,7 @@ import './FourthYearPyqBtech.css';
 
 const FourthYearPyqBtech = () => {
   const navigate = useNavigate();
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [selectedBranch, setSelectedBranch] = useState('cse');
 
   // 4th Year Branches with their respective 7th & 8th Sem subjects
   const branchData = {

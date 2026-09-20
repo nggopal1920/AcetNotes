@@ -4,23 +4,31 @@ import './ThirdYearPyqBtech.css';
 
 const ThirdYearPyqBtech = () => {
   const navigate = useNavigate();
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [selectedBranch, setSelectedBranch] = useState('cse');
 
   // 3rd Year Branches with their respective 5th & 6th Sem subjects
   const branchData = {
-    cse: {
+
+  cse: {
       name: 'Computer Science & Engineering (CSE)',
       code: 'KCS',
       icon: 'fa-laptop-code',
       subjects: [
-        { name: 'Database Management Systems', code: 'KCS-501', slug: 'dbms-3yr' },
-        { name: 'Design and Analysis of Algorithms', code: 'KCS-502', slug: 'daa' },
-        { name: 'Software Engineering', code: 'KCS-503', slug: 'software-engineering' },
-        { name: 'Web Technology', code: 'KCS-601', slug: 'web-technology' },
-        { name: 'Compiler Design', code: 'KCS-602', slug: 'compiler-design' },
-        { name: 'Computer Networks', code: 'KCS-603', slug: 'computer-networks' },
+        { name: 'Database Management Systems', code: 'BCS501', slug: 'dbms' },
+        { name: 'Web Technology', code: 'BCS502', slug: 'web-tech' },
+        { name: 'Design and Analysis of Algorithm', code: 'BCS503', slug: 'daa' },
+        { name: 'Object Oriented System Design with C++', code: 'BCS054', slug: 'ood-cpp' },
+        { name: 'Data Warehousing & Data Mining', code: 'BCS058', slug: 'dwm' },
+        { name: 'Software Engineering', code: 'BCS601', slug: 'se' },
+        { name: 'Compiler Design', code: 'BCS602', slug: 'compiler-design' },
+        { name: 'Computer Networks', code: 'BCS603', slug: 'cn' },
+        { name: 'Data Compression', code: 'BCS064', slug: 'data-compression' },
+        { name: 'Software Project Management', code: 'DBOE068', slug: 'spm' }
       ]
     },
+
+
+
     it: {
       name: 'Information Technology (IT)',
       code: 'KIT',
