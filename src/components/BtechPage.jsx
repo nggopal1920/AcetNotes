@@ -41,11 +41,11 @@ const BtechPage = () => {
       {/* Article / Header Section - Customized for 3rd Year Focus */}
       <section className="btech-article-card">
         <span className="article-badge">
-          <i className="fa-solid fa-network-wired"></i> B.Tech 3rd Year Special Hub
+          <i className="fa-solid fa-network-wired"></i> B.Tech Aktu Special Hub
         </span>
-        <h1 className="article-title">B.Tech 3rd Year Advanced Engineering Resources</h1>
+        <h1 className="article-title">B.Tech Advanced Engineering Resources</h1>
         <p className="article-p">
-          Welcome to the <span className="brand-highlight">"AktuNotes</span> 3rd Year repository. This section is specially dedicated to core technical semesters featuring advanced algorithms, system design, operating systems, database management, and semester exam preparation notes.
+          Welcome to the <span className="brand-highlight">"AktuNotes</span> repository. This section is specially dedicated to core technical semesters featuring advanced algorithms, system design, operating systems, database management, and semester exam preparation notes.
         </p>
         <div className="article-tips">
           <div className="tip-item">
@@ -104,7 +104,7 @@ const BtechPage = () => {
           Why B.Tech 3rd Year is Crucial for Your Engineering Career
         </h2>
         <p className="article-p">
-          The third year of engineering is widely considered the backbone of a technical degree. During this phase, students transition from foundational concepts to core engineering domains such as Computer Science, Information Technology, Electronics, and Mechanical branches. Scoring well in these semesters requires precise understanding, structured notes, and regular practice of previous years' question papers (PYQs).
+           Engineering is widely considered the backbone of a technical degree. During this phase, students transition from foundational concepts to core engineering domains such as Computer Science, Information Technology, Electronics, and Mechanical branches. Scoring well in these semesters requires precise understanding, structured notes, and regular practice of previous years' question papers (PYQs).
         </p>
         
         <h3 style={{ fontSize: '1.2rem', fontWeight: '800', color: '#0f172a', marginBottom: '0.6rem' }}>
