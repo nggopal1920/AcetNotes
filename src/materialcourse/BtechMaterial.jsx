@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BtechMaterial.css';
 
 const BtechMaterial = () => {
+  // Page khulte hi scroll automatically top par ho jayega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="btech-material-container">
       {/* Top Header & Intro */}
