@@ -1,133 +1,123 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import './B.techSubjectPyq.css';
+import './B.techYearPyq.css'; 
 
-const BtechSubjectPyq = () => {
+const BtechYearPyq = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  
   const course = searchParams.get('course') || 'btech';
-  const year = searchParams.get('year') || '3';
-  const branch = searchParams.get('branch') || 'cse';
-  const subjectId = searchParams.get('subject') || 'subject';
 
-  // Subject ID ko proper readable Name mein map karne ke liye object
-  const subjectNamesMap = {
-    'dbms': 'Database Management System (BCS501)',
-    'web-tech': 'Web Technology (BCS502)',
-    'daa': 'Design and Analysis of Algorithm (BCS503)',
-    'ood-cpp': 'Object Oriented System Design with C++ (BCS054)',
-    'dwm': 'Data Warehousing & Data Mining (BCS058)',
-    'se': 'Software Engineering (BCS601)',
-    'compiler-design': 'Compiler Design (BCS602)',
-    'cn': 'Computer Networks (BCS603)',
-    'data-compression': 'Data Compression (BCS064)',
-    'spm': 'Software Project Management (DBOE068)'
-  };
+  // Page load hote hi scroll top par ho jayega
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  const formattedSubjectName = subjectNamesMap[subjectId] || subjectId.toUpperCase();
-
-  // Pichle 5 saal ke PYQs ka data (Yahan aap apni Google Drive links replace karenge)
-  const pyqYearsData = [
-    {
-      year: '2025',
-      title: 'AKTU 2025-26 Examination Paper',
-      viewUrl: '#',
-      downloadUrl: '#'
+  const years = [
+    { 
+      id: '1', 
+      title: '1st Year', 
+      description: 'Common for all engineering branches', 
+      icon: 'fa-solid fa-1',
+      path: '/pyq/course/b.tech/first-year' 
     },
-    {
-      year: '2024',
-      title: 'AKTU 2024-25 Examination Paper',
-      viewUrl: '#',
-      downloadUrl: '#'
+    { 
+      id: '2', 
+      title: '2nd Year', 
+      description: 'Departmental core subjects start', 
+      icon: 'fa-solid fa-2',
+      path: '/pyq/course/b.tech/second-year' 
     },
-    {
-      year: '2023',
-      title: 'AKTU 2023-24 Examination Paper',
-      viewUrl: '#',
-      downloadUrl: '#'
+    { 
+      id: '3', 
+      title: '3rd Year', 
+      description: 'Advanced core & departmental electives', 
+      icon: 'fa-solid fa-3',
+      path: '/pyq/course/b.tech/third-year' 
     },
-    {
-      year: '2022',
-      title: 'AKTU 2022-23 Examination Paper',
-      viewUrl: '#',
-      downloadUrl: '#'
-    },
-    {
-      year: '2021',
-      title: 'AKTU 2021-22 Examination Paper',
-      viewUrl: '#',
-      downloadUrl: '#'
+    { 
+      id: '4', 
+      title: '4th Year', 
+      description: 'Major projects & professional electives', 
+      icon: 'fa-solid fa-4',
+      path: '/pyq/course/b.tech/fourth-year' 
     }
   ];
 
+  const handleYearSelect = (yearItem) => {
+    navigate(`${yearItem.path}?course=${course}&year=${yearItem.id}`);
+  };
+
   return (
-    <div className="subject-pyq-container" style={{ padding: '30px', maxWidth: '1000px', margin: '0 auto' }}>
-      {/* Header */}
-      <div className="subject-pyq-header" style={{ marginBottom: '30px', background: '#fff', padding: '25px', borderRadius: '12px', border: '1px solid #eaeaea', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
-        <button 
-          onClick={() => navigate(-1)} 
-          style={{ padding: '8px 15px', cursor: 'pointer', marginBottom: '15px', background: '#f1f5f9', border: 'none', borderRadius: '6px', fontWeight: '600', color: '#334155' }}
-        >
-          <i className="fa-solid fa-arrow-left"></i> Back to Branches & Subjects
+    <div className="btech-year-container">
+      {/* Top Header (Compact & Clean as per requirement) */}
+      <div className="year-header">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <i className="fa-solid fa-arrow-left"></i> Back to Courses
         </button>
-        <div style={{ display: 'flex', gap: '10px', marginBottom: '12px' }}>
-          <span style={{ background: '#e0f2fe', color: '#0369a1', padding: '4px 10px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold' }}>{course.toUpperCase()}</span>
-          <span style={{ background: '#f1f5f9', color: '#334155', padding: '4px 10px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold' }}>Year {year}</span>
-          <span style={{ background: '#fef3c7', color: '#b45309', padding: '4px 10px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold' }}>{branch.toUpperCase()}</span>
-        </div>
-        <h1 style={{ fontSize: '24px', color: '#0f172a', fontWeight: '800', marginBottom: '6px' }}>Previous Year Question Papers (5 Years)</h1>
-        <p style={{ color: '#64748b', fontSize: '14px' }}>Subject: <strong style={{ color: '#0f172a' }}>{formattedSubjectName}</strong></p>
+        <span className="badge">B.Tech PYQs Portal</span>
+        <h1 className="main-title">Select Your Academic Year</h1>
+        <p className="subtitle">Choose your current B.Tech year to access branch-wise and subject-wise previous year question papers.</p>
       </div>
 
-      {/* 5 Years Cards List */}
-      <div className="pyq-years-list" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-        {pyqYearsData.map((item) => (
-          <div 
-            key={item.year} 
-            style={{ 
-              background: '#fff', 
-              padding: '20px', 
-              borderRadius: '10px', 
-              boxShadow: '0 2px 8px rgba(0,0,0,0.04)', 
-              border: '1px solid #e2e8f0',
-              display: 'flex', 
-              justifyContent: 'space-between', 
-              alignItems: 'center',
-              flexWrap: 'wrap',
-              gap: '15px'
-            }}
-          >
-            <div>
-              <span style={{ background: '#2563eb', color: '#fff', padding: '4px 10px', borderRadius: '6px', fontSize: '13px', fontWeight: '700' }}>
-                {item.year}
-              </span>
-              <h3 style={{ marginTop: '8px', color: '#1e293b', fontSize: '17px', fontWeight: '700' }}>{item.title}</h3>
+      {/* Years Grid Layout */}
+      <div className="years-grid">
+        {years.map((item) => (
+          <div key={item.id} className="year-card" onClick={() => handleYearSelect(item)}>
+            <div className="year-icon-box">
+              <i className={item.icon}></i>
             </div>
-
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <a 
-                href={item.viewUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{ padding: '8px 16px', background: '#10b981', color: '#fff', textDecoration: 'none', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}
-              >
-                <i className="fa-solid fa-eye"></i> View PDF
-              </a>
-              <a 
-                href={item.downloadUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{ padding: '8px 16px', background: '#2563eb', color: '#fff', textDecoration: 'none', borderRadius: '6px', fontSize: '13px', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}
-              >
-                <i className="fa-solid fa-download"></i> Download
-              </a>
+            <div className="year-info">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+            <div className="arrow-box">
+              <i className="fa-solid fa-chevron-right"></i>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Bottom Rich SEO Section for Google AdSense Approval */}
+      <div className="btech-seo-section">
+        <div className="btech-seo-main-card">
+          <h2>Why Practice Previous Year Question Papers (PYQs)?</h2>
+          <p>
+            Scoring top grades in B.Tech university examinations under AKTU and other technical universities 
+            requires more than just reading textbooks. Analyzing previous year question papers helps students 
+            understand the recurring patterns, marking schemes, and high-weightage topics frequently asked by examiners. 
+            Our platform compiles authentic university question papers categorized systematically by year, branch, and subject 
+            to streamline your semester exam preparations.
+          </p>
+        </div>
+
+        <div className="btech-seo-grid">
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
+              <i className="fa-solid fa-file-lines"></i>
+            </div>
+            <h4>Authentic Papers</h4>
+            <p>Access official semester exam papers aligned precisely with university patterns.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
+              <i className="fa-solid fa-chart-line"></i>
+            </div>
+            <h4>Trend Analysis</h4>
+            <p>Identify repeated questions and master high-scoring topics efficiently.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
+              <i className="fa-solid fa-bullseye"></i>
+            </div>
+            <h4>Exam Readiness</h4>
+            <p>Build confidence and improve time management before entering the examination hall.</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default BtechSubjectPyq;
+export default BtechYearPyq;
