@@ -57,12 +57,14 @@ const SecondYearBTech = () => {
 
   return (
     <div className="year-page-container">
-      {/* Header Banner */}
+      {/* Header Banner & SEO Intro */}
       <div className="year-header">
-        <span className="year-tag">Second Year B.Tech</span>
-        <h1 className="year-title">2nd Year Syllabus & Core Subjects</h1>
+        <span className="year-tag">
+          <i className="fa-solid fa-graduation-cap"></i> Second Year B.Tech Portal
+        </span>
+        <h1 className="year-title">B.Tech 2nd Year Syllabus & Core Subject Notes</h1>
         <p className="year-desc">
-          Select your engineering branch to view core subjects and download unit-wise PDF notes.
+          Select your engineering branch to explore AKTU curriculum, core semester subjects, and download comprehensive unit-wise notes for high CGPA preparation.
         </p>
       </div>
 
@@ -93,23 +95,68 @@ const SecondYearBTech = () => {
         </div>
 
         <div className="subjects-list-grid">
-          {currentSubjects.map((subject) => (
-            <div key={subject.id} className="subject-row-card">
-              <div className="subject-info">
-                <span className="sub-code">{subject.code}</span>
-                <h4 className="sub-title">{subject.title}</h4>
-                <span className="sub-units">{subject.unitsCount} Units Available</span>
-              </div>
+          {currentSubjects.length > 0 ? (
+            currentSubjects.map((subject) => (
+              <div key={subject.id} className="subject-row-card">
+                <div className="subject-info">
+                  <span className="sub-code">{subject.code}</span>
+                  <h4 className="sub-title">{subject.title}</h4>
+                  <span className="sub-units">{subject.unitsCount} Units Available</span>
+                </div>
 
-              <button
-                className="btn-open-subject"
-                onClick={() => handleSubjectClick(subject.id)}
-              >
-                <span>View Notes</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </button>
+                <button
+                  className="btn-open-subject"
+                  onClick={() => handleSubjectClick(subject.id)}
+                >
+                  <span>View Notes</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            ))
+          ) : (
+            <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#888', padding: '20px' }}>
+              Subjects for this branch will be updated soon.
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Bottom Rich Content Section for AdSense Approval & SEO */}
+      <div className="btech-seo-section">
+        <div className="btech-seo-main-card">
+          <h2>Build a Strong Foundation in Your 2nd Year Engineering</h2>
+          <p>
+            The second year of B.Tech marks the transition from basic sciences to core engineering branches. 
+            Subjects like Data Structures, Operating Systems, Database Management Systems, and Object-Oriented Programming form the absolute bedrock 
+            of technical interviews and campus placements. Our platform provides structured, unit-wise notes tailored to AKTU guidelines 
+            to ensure engineering students grasp core logic effortlessly and excel in university examinations.
+          </p>
+        </div>
+
+        <div className="btech-seo-grid">
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
+              <i className="fa-solid fa-book-bookmark"></i>
             </div>
-          ))}
+            <h4>Unit-Wise Breakdown</h4>
+            <p>Every subject is methodically divided into 5 units containing thorough explanations, syntax examples, and core concepts.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
+              <i className="fa-solid fa-laptop-code"></i>
+            </div>
+            <h4>Placement Ready Core</h4>
+            <p>Special focus on fundamental programming and logical subjects that are frequently tested in technical screening rounds.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
+              <i className="fa-solid fa-bullseye"></i>
+            </div>
+            <h4>Exam-Oriented Prep</h4>
+            <p>Direct study materials designed to simplify complex technical topics and boost overall semester CGPA performance.</p>
+          </div>
         </div>
       </div>
     </div>

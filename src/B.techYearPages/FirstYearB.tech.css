@@ -40,6 +40,59 @@
   line-height: 1.5;
 }
 
+/* AdSense & SEO Content Cards */
+.btech-article-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.03);
+}
+
+.btech-article-card h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+}
+
+.btech-article-card p {
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.btech-article-card p:last-child {
+  margin-bottom: 0;
+}
+
+.article-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border: 1px solid #bfdbfe;
+}
+
+.btech-article-card ul {
+  padding-left: 1.2rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.btech-article-card li {
+  margin-bottom: 0.4rem;
+}
+
 /* Branch Selector Section */
 .branch-section {
   background: #f8fafc;
@@ -90,6 +143,10 @@
 }
 
 /* Subjects Section */
+.subjects-section {
+  margin-top: 2rem;
+}
+
 .subjects-header {
   display: flex;
   justify-content: space-between;
@@ -213,6 +270,10 @@
 
   .year-desc {
     font-size: 0.85rem;
+  }
+
+  .btech-article-card {
+    padding: 1.2rem;
   }
 
   .branch-section {

@@ -49,12 +49,14 @@ const ThirdYearBTech = () => {
 
   return (
     <div className="year-page-container">
-      {/* Header Banner */}
+      {/* Header Banner & SEO Intro */}
       <div className="year-header">
-        <span className="year-tag">Third Year B.Tech</span>
-        <h1 className="year-title">3rd Year Syllabus & Core Subjects</h1>
+        <span className="year-tag">
+          <i className="fa-solid fa-graduation-cap"></i> Third Year B.Tech Portal
+        </span>
+        <h1 className="year-title">B.Tech 3rd Year Syllabus & Core Subject Notes</h1>
         <p className="year-desc">
-          Select your engineering branch to view core subjects and access unit-wise notes.
+          Select your engineering branch to explore AKTU curriculum, core semester subjects, and download comprehensive unit-wise notes for high CGPA preparation.
         </p>
       </div>
 
@@ -108,6 +110,45 @@ const ThirdYearBTech = () => {
               Subjects for this branch will be updated soon.
             </p>
           )}
+        </div>
+      </div>
+
+      {/* Bottom Rich Content Section for AdSense Approval & SEO */}
+      <div className="btech-seo-section">
+        <div className="btech-seo-main-card">
+          <h2>Master Your 3rd Year Engineering Curriculum</h2>
+          <p>
+            The third year of B.Tech is considered the most crucial phase for technical placements, internships, and core engineering mastery. 
+            With advanced subjects like Database Management Systems, Compiler Design, Computer Networks, and Design & Analysis of Algorithms, 
+            having structured study materials becomes mandatory. Our platform provides curated, unit-wise notes aligned with AKTU guidelines 
+            to help engineering students understand core logic easily and score exceptional marks in semester exams.
+          </p>
+        </div>
+
+        <div className="btech-seo-grid">
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
+              <i className="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h4>Unit-Wise Breakdown</h4>
+            <p>Every subject is systematically divided into 5 units containing thorough explanations, derivations, and practice problems.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
+              <i className="fa-solid fa-laptop-code"></i>
+            </div>
+            <h4>Core Technical Focus</h4>
+            <p>Special emphasis on programming, networking architecture, and core engineering concepts frequently asked in university papers.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
+              <i className="fa-solid fa-bullseye"></i>
+            </div>
+            <h4>Exam-Oriented Prep</h4>
+            <p>Direct notes and reference guides designed to simplify tough university questions and maximize final CGPA performance.</p>
+          </div>
         </div>
       </div>
     </div>

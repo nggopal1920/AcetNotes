@@ -45,18 +45,20 @@ const FourthYearBTech = () => {
 
   const currentSubjects = subjectsData[selectedBranch] || [];
 
- const handleSubjectClick = (subjectId) => {
+  const handleSubjectClick = (subjectId) => {
     navigate(`/notes/fourth-year?branch=${selectedBranch}&subject=${subjectId}`);
   };
 
   return (
     <div className="year-page-container">
-      {/* Header Banner */}
+      {/* Header Banner & SEO Intro */}
       <div className="year-header">
-        <span className="year-tag">Fourth Year B.Tech</span>
-        <h1 className="year-title">4th Year Syllabus & Advanced Electives</h1>
+        <span className="year-tag">
+          <i className="fa-solid fa-graduation-cap"></i> Fourth Year B.Tech Portal
+        </span>
+        <h1 className="year-title">B.Tech 4th Year Syllabus & Advanced Electives</h1>
         <p className="year-desc">
-          Select your engineering branch to view elective subjects and download unit-wise PDF notes.
+          Select your engineering branch to explore professional electives, final-year curriculum, and download unit-wise PDF notes.
         </p>
       </div>
 
@@ -87,23 +89,67 @@ const FourthYearBTech = () => {
         </div>
 
         <div className="subjects-list-grid">
-          {currentSubjects.map((subject) => (
-            <div key={subject.id} className="subject-row-card">
-              <div className="subject-info">
-                <span className="sub-code">{subject.code}</span>
-                <h4 className="sub-title">{subject.title}</h4>
-                <span className="sub-units">{subject.unitsCount} Units Available</span>
-              </div>
+          {currentSubjects.length > 0 ? (
+            currentSubjects.map((subject) => (
+              <div key={subject.id} className="subject-row-card">
+                <div className="subject-info">
+                  <span className="sub-code">{subject.code}</span>
+                  <h4 className="sub-title">{subject.title}</h4>
+                  <span className="sub-units">{subject.unitsCount} Units Available</span>
+                </div>
 
-              <button
-                className="btn-open-subject"
-                onClick={() => handleSubjectClick(subject.id)}
-              >
-                <span>View Notes</span>
-                <i className="fa-solid fa-chevron-right"></i>
-              </button>
+                <button
+                  className="btn-open-subject"
+                  onClick={() => handleSubjectClick(subject.id)}
+                >
+                  <span>View Notes</span>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            ))
+          ) : (
+            <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#888', padding: '20px' }}>
+              Subjects for this branch will be updated soon.
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Bottom Rich Content Section for AdSense Approval & SEO */}
+      <div className="btech-seo-section">
+        <div className="btech-seo-main-card">
+          <h2>Conquer Your Final Year with Advanced Engineering Electives</h2>
+          <p>
+            The final year of B.Tech focuses on cutting-edge technologies, specialized professional electives, and industry-oriented subjects like Cloud Computing, Machine Learning, Cyber Security, and Deep Learning. 
+            Balancing campus placements, final projects, and university semester exams can be challenging. Our platform provides high-quality, unit-wise notes tailored to AKTU guidelines 
+            to help you score stellar marks effortlessly in your ultimate graduation year.
+          </p>
+        </div>
+
+        <div className="btech-seo-grid">
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
+              <i className="fa-solid fa-book-bookmark"></i>
             </div>
-          ))}
+            <h4>Advanced Electives</h4>
+            <p>Comprehensive coverage of high-level professional electives mapped directly to university codes.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
+              <i className="fa-solid fa-microchip"></i>
+            </div>
+            <h4>Industry-Ready Content</h4>
+            <p>Focus on modern tech stacks, automation, AI, and practical engineering methodologies.</p>
+          </div>
+
+          <div className="btech-seo-feature-card">
+            <div className="feature-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
+              <i className="fa-solid fa-bullseye"></i>
+            </div>
+            <h4>Final Semester Mastery</h4>
+            <p>Streamlined notes designed to help you balance final year projects and semester exams with ease.</p>
+          </div>
         </div>
       </div>
     </div>
