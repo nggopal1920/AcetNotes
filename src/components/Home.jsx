@@ -18,7 +18,7 @@ const Home = () => {
             <i className="fa-solid fa-sparkles"></i> #1 B.Tech Resource Portal
           </span>
           <h1 className="hero-title">
-            Master Your Semester Exams with <span className="highlight">AktuNotes</span>
+            Master Your Semester Exams with <span className="highlight">NotesHub</span>
           </h1>
           <p className="hero-subtitle">
             Get high-quality year-wise & branch-wise B.Tech notes, previous year question papers (PYQs), syllabus, and exam prep guides for free.
@@ -276,7 +276,7 @@ const Home = () => {
           {/* Question 1 */}
           <div className={`faq-item ${openFaq === 1 ? 'active' : ''}`} onClick={() => toggleFaq(1)}>
             <div className="faq-question">
-              <h4>Are all study materials on AktuNotes 100% free?</h4>
+              <h4>Are all study materials on NotesHub 100% free?</h4>
               <i className={`fa-solid fa-chevron-down ${openFaq === 1 ? 'rotate' : ''}`}></i>
             </div>
             {openFaq === 1 && (

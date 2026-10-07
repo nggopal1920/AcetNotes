@@ -22,8 +22,8 @@ const Navbar = () => {
             <i className="fa-solid fa-graduation-cap"></i>
           </div>
           <div className="logo-text">
-            <span className="logo-accent">Aktu</span>
-            <span className="logo-main">Notes</span>
+            <span className="logo-accent">Notes</span>
+            <span className="logo-main">Hub</span>
           </div>
         </Link>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
             <div className="mobile-drawer active">
               <div className="drawer-header">
                 <div className="drawer-logo">
-                  <span className="logo-accent">Aktu</span>Notes
+                  <span className="logo-accent">Notes</span>Hub
                 </div>
                 <button className="drawer-close-btn" onClick={closeMenu}>
                   <i className="fa-solid fa-xmark"></i>
