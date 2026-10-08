@@ -34,6 +34,13 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Added Intro Text for Google AdSense Crawler */}
+      <section className="intro-text-section" style={{ padding: '2rem 5%', textAlign: 'center', background: '#f8fafc' }}>
+        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#475569', fontSize: '1.05rem', lineHeight: '1.6' }}>
+          Welcome to <strong>NotesHub</strong>, the ultimate academic companion for engineering and pharmacy students. We provide well-structured unit-wise lecture notes, previous year solved question papers, and essential exam preparation resources to help you score high CGPA in your university exams.
+        </p>
+      </section>
+
       {/* Quick Access Feature Cards */}
       <section className="features-section">
         <h2 className="section-title">What We Offer</h2>
@@ -67,87 +74,82 @@ const Home = () => {
         </div>
       </section>
 
-      
-
-
       {/* Explore Courses Grid */}
-<section className="courses-grid-section">
-  <h2 className="section-title">Explore Study Material by Course</h2>
-  <div className="courses-grid">
-    <Link to="/materialcourse/BtechMaterial" className="course-card">
-      <div className="course-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
-        <i className="fa-solid fa-laptop-code"></i>
-      </div>
-      <h3>B.Tech</h3>
-      <span className="course-count">4,000+ Notes</span>
-    </Link>
+      <section className="courses-grid-section">
+        <h2 className="section-title">Explore Study Material by Course</h2>
+        <div className="courses-grid">
+          <Link to="/materialcourse/BtechMaterial" className="course-card">
+            <div className="course-icon" style={{ color: '#2563eb', background: '#eff6ff' }}>
+              <i className="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>B.Tech</h3>
+            <span className="course-count">4,000+ Notes</span>
+          </Link>
 
-    <Link to="/bpharm" className="course-card">
-      <div className="course-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
-        <i className="fa-solid fa-pills"></i>
-      </div>
-      <h3>B.Pharm</h3>
-      <span className="course-count">2,500+ Notes</span>
-    </Link>
+          <Link to="/bpharm" className="course-card">
+            <div className="course-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
+              <i className="fa-solid fa-pills"></i>
+            </div>
+            <h3>B.Pharm</h3>
+            <span className="course-count">2,500+ Notes</span>
+          </Link>
 
-    <Link to="/mca" className="course-card">
-      <div className="course-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
-        <i className="fa-solid fa-database"></i>
-      </div>
-      <h3>MCA</h3>
-      <span className="course-count">1,200+ Notes</span>
-    </Link>
+          <Link to="/mca" className="course-card">
+            <div className="course-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
+              <i className="fa-solid fa-database"></i>
+            </div>
+            <h3>MCA</h3>
+            <span className="course-count">1,200+ Notes</span>
+          </Link>
 
-    <Link to="/mba" className="course-card">
-      <div className="course-icon" style={{ color: '#d97706', background: '#fffbeb' }}>
-        <i className="fa-solid fa-chart-pie"></i>
-      </div>
-      <h3>MBA</h3>
-      <span className="course-count">1,800+ Notes</span>
-    </Link>
+          <Link to="/mba" className="course-card">
+            <div className="course-icon" style={{ color: '#d97706', background: '#fffbeb' }}>
+              <i className="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3>MBA</h3>
+            <span className="course-count">1,800+ Notes</span>
+          </Link>
 
-    <Link to="/mtech" className="course-card">
-      <div className="course-icon" style={{ color: '#475569', background: '#f1f5f9' }}>
-        <i className="fa-solid fa-gears"></i>
-      </div>
-      <h3>M.Tech</h3>
-      <span className="course-count">New Resources</span>
-    </Link>
+          <Link to="/mtech" className="course-card">
+            <div className="course-icon" style={{ color: '#475569', background: '#f1f5f9' }}>
+              <i className="fa-solid fa-gears"></i>
+            </div>
+            <h3>M.Tech</h3>
+            <span className="course-count">New Resources</span>
+          </Link>
 
-    <Link to="/mpharm" className="course-card">
-      <div className="course-icon" style={{ color: '#0d9488', background: '#f0fdfa' }}>
-        <i className="fa-solid fa-flask"></i>
-      </div>
-      <h3>M.Pharm</h3>
-      <span className="course-count">New Syllabi</span>
-    </Link>
+          <Link to="/mpharm" className="course-card">
+            <div className="course-icon" style={{ color: '#0d9488', background: '#f0fdfa' }}>
+              <i className="fa-solid fa-flask"></i>
+            </div>
+            <h3>M.Pharm</h3>
+            <span className="course-count">New Syllabi</span>
+          </Link>
 
-    <Link to="/bca" className="course-card">
-      <div className="course-icon" style={{ color: '#0284c7', background: '#e0f2fe' }}>
-        <i className="fa-solid fa-code"></i>
-      </div>
-      <h3>BCA</h3>
-      <span className="course-count">Verified Notes</span>
-    </Link>
+          <Link to="/bca" className="course-card">
+            <div className="course-icon" style={{ color: '#0284c7', background: '#e0f2fe' }}>
+              <i className="fa-solid fa-code"></i>
+            </div>
+            <h3>BCA</h3>
+            <span className="course-count">Verified Notes</span>
+          </Link>
 
-    <Link to="/bba" className="course-card">
-      <div className="course-icon" style={{ color: '#dc2626', background: '#fef2f2' }}>
-        <i className="fa-solid fa-briefcase"></i>
-      </div>
-      <h3>BBA</h3>
-      <span className="course-count">Study Modules</span>
-    </Link>
-  </div>
-</section>
+          <Link to="/bba" className="course-card">
+            <div className="course-icon" style={{ color: '#dc2626', background: '#fef2f2' }}>
+              <i className="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>BBA</h3>
+            <span className="course-count">Study Modules</span>
+          </Link>
+        </div>
+      </section>
 
-
-
-      {/* Everything You Need for a High CGPA */}
+      {/* Everything You Need for a High CGPA (Quantum replaced with Exam Prep) */}
       <section className="cgpa-section">
         <div className="cgpa-header">
           <span className="cgpa-badge">ALL-IN-ONE STUDY SUITE</span>
           <h2>Everything You Need for a High CGPA & Stress-Free Semester</h2>
-          <p>Free handwritten notes, Quantum series PDFs, solved papers, and live circulars in one verified place.</p>
+          <p>Free handwritten notes, exam prep series PDFs, solved papers, and live circulars in one verified place.</p>
         </div>
         <div className="cgpa-grid">
           <div className="cgpa-card">
@@ -162,7 +164,7 @@ const Home = () => {
             <div className="cgpa-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
               <i className="fa-solid fa-cube"></i>
             </div>
-            <h4>Quantum Series PDFs</h4>
+            <h4>Exam Prep Series PDFs</h4>
             <p>All-in-one exam preparation series for 1st to 8th semesters.</p>
           </div>
 
@@ -200,72 +202,28 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Built by Engineers Who Been Through It */}
-      <section className="about-builders-section">
-        <div className="builders-container">
-          <div className="builders-text">
-            <span className="builders-badge">FOR STUDENTS. BY UNIVERSITY ALUMNI.</span>
-            <h2>Built by Engineers Who Been Through It.</h2>
-            <p>
-              We went from scrambling through last-night exam cramming and scattered xerox notes to building the #1 trusted resource hub for over 50,000 engineering & pharmacy students.
-            </p>
-            <Link to="/about" className="btn-community">
-              Join Student Community <i className="fa-solid fa-arrow-right"></i>
-            </Link>
-          </div>
-          <div className="builders-stats-side">
-            <div className="builder-stat-card">
-              <div>
-                <h3>50,000+</h3>
-                <p>Active Students</p>
-              </div>
-              <div className="stat-icon" style={{ color: '#9333ea', background: '#faf5ff' }}>
-                <i className="fa-solid fa-users"></i>
-              </div>
-            </div>
-
-            <div className="builder-stat-card">
-              <div>
-                <h3>10,000+</h3>
-                <p>Verified Notes</p>
-              </div>
-              <div className="stat-icon" style={{ color: '#d97706', background: '#fffbeb' }}>
-                <i className="fa-solid fa-file-circle-check"></i>
-              </div>
-            </div>
-
-            <div className="builder-stat-card">
-              <div>
-                <h3>120+</h3>
-                <p>Affiliated Colleges</p>
-              </div>
-              <div className="stat-icon" style={{ color: '#16a34a', background: '#f0fdf4' }}>
-                <i className="fa-solid fa-building-columns"></i>
-              </div>
-            </div>
-          </div>
+      {/* Additional SEO & AdSense Approval Content Section */}
+      <section className="adsense-content-section" style={{ padding: '3rem 5%', background: '#ffffff', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{ fontSize: '1.8rem', color: '#1e293b', marginBottom: '1rem', textAlign: 'center' }}>
+            Complete Guide for AKTU Students: How to Score 9+ CGPA
+          </h2>
+          <p style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.2rem' }}>
+            Preparing for Dr. A.P.J. Abdul Kalam Technical University (AKTU) semester examinations requires a smart approach and access to the right study materials. At <strong>NotesHub</strong>, we bridge the gap between complex engineering syllabi and simple, easy-to-understand unit-wise notes. Whether you are pursuing B.Tech, B.Pharm, MCA, or MBA, having structured lecture notes and previous year question papers can drastically improve your exam preparation.
+          </p>
+          
+          <h3 style={{ fontSize: '1.3rem', color: '#1e293b', marginTop: '1.5rem', marginBottom: '0.8rem' }}>
+            Why Proper Study Material Matters for Engineering Exams
+          </h3>
+          <ul style={{ color: '#475569', fontSize: '1rem', lineHeight: '1.6', paddingLeft: '20px' }}>
+            <li style={{ marginBottom: '0.5rem' }}><strong>Unit-Wise Breakdown:</strong> Studying according to the official 5-unit AKTU syllabus ensures no important topics are missed before the semester tests.</li>
+            <li style={{ marginBottom: '0.5rem' }}><strong>Previous Year Question Papers (PYQs):</strong> Analyzing past papers helps students understand recurring important questions and university marking schemes.</li>
+            <li style={{ marginBottom: '0.5rem' }}><strong>Handwritten & Topper Notes:</strong> Clear, concise diagrams and derivations written by top-performing students make last-minute revisions stress-free.</li>
+          </ul>
         </div>
       </section>
 
-      {/* Your Best Semester Starts Now */}
-      <section className="semester-banner-section">
-        <div className="semester-banner-content">
-          <div className="semester-text">
-            <h2>Your Best Semester Starts Now.</h2>
-            <p>
-              Stop stressing about syllabus backlogs and scattered notes. Start studying with verified university resources — 24/7.
-            </p>
-            <Link to="/btech" className="btn-semester">
-              Explore Notes & Quantum <i className="fa-solid fa-arrow-right"></i>
-            </Link>
-          </div>
-          <div className="semester-badge-card">
-            <i className="fa-solid fa-heart" style={{ color: '#2563eb', fontSize: '1.8rem', marginBottom: '0.5rem' }}></i>
-            <h4>100% Free Study Notes</h4>
-            <p>Lifetime Access</p>
-          </div>
-        </div>
-      </section>
+
 
       {/* Frequently Asked Questions */}
       <section className="faq-section">
@@ -273,7 +231,6 @@ const Home = () => {
         <h2 className="faq-main-title">Frequently Asked Questions</h2>
         
         <div className="faq-container">
-          {/* Question 1 */}
           <div className={`faq-item ${openFaq === 1 ? 'active' : ''}`} onClick={() => toggleFaq(1)}>
             <div className="faq-question">
               <h4>Are all study materials on NotesHub 100% free?</h4>
@@ -281,12 +238,11 @@ const Home = () => {
             </div>
             {openFaq === 1 && (
               <div className="faq-answer">
-                <p>Yes, all handwritten notes, Quantum series PDFs, syllabus breakdowns, and previous year solved question papers are completely free with zero subscription fees.</p>
+                <p>Yes, all handwritten notes, syllabus breakdowns, and previous year solved question papers are completely free with zero subscription fees.</p>
               </div>
             )}
           </div>
 
-          {/* Question 2 */}
           <div className={`faq-item ${openFaq === 2 ? 'active' : ''}`} onClick={() => toggleFaq(2)}>
             <div className="faq-question">
               <h4>Where can I find real-time AKTU circulars & notices?</h4>
@@ -299,20 +255,18 @@ const Home = () => {
             )}
           </div>
 
-          {/* Question 3 */}
           <div className={`faq-item ${openFaq === 3 ? 'active' : ''}`} onClick={() => toggleFaq(3)}>
             <div className="faq-question">
-              <h4>Do Quantum series cover all 5 units for semester exams?</h4>
+              <h4>Do study guides cover all 5 units for semester exams?</h4>
               <i className={`fa-solid fa-chevron-down ${openFaq === 3 ? 'rotate' : ''}`}></i>
             </div>
             {openFaq === 3 && (
               <div className="faq-answer">
-                <p>Yes, our curated Quantum series booklets contain chapter-wise summaries, important 2-mark & 10-mark questions, and past 10-year recurring university solutions.</p>
+                <p>Yes, our curated study booklets contain chapter-wise summaries, important 2-mark & 10-mark questions, and past 10-year recurring university solutions.</p>
               </div>
             )}
           </div>
 
-          {/* Question 4 */}
           <div className={`faq-item ${openFaq === 4 ? 'active' : ''}`} onClick={() => toggleFaq(4)}>
             <div className="faq-question">
               <h4>How can I join the student community group?</h4>
